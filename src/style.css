@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+@import "tailwindcss";
+
+
+@utility gradient-button {
+        background: linear-gradient(270deg, #00B277 -0.06%, #0092E7 100%);
+        display: flex;
+        cursor: pointer;
+        text-align: center;
+        @apply items-center justify-center;
+        @apply transition-all ease-in hover:opacity-80 active:scale-95;
+
+        /* Para que el link no salga con subrayado */
+        text-decoration: none;
+}
+
+
+
+
+@theme {
+
+        /*Font family*/
+
+        --font-host: "Host Grotesk";
+
+        --font-text2: clamp(0.875rem, 0.5vw + 0.75rem, 1rem);
+        /* 14px → 16px */
+
+        --font-text1: clamp(1rem, 0.8vw + 0.9rem, 1.25rem);
+        /* 16px → 20px */
+
+        --font-h6: clamp(1.25rem, 1vw + 1.1rem, 1.5rem);
+        /* 20px → 24px */
+
+        --font-h5: clamp(1.4rem, 1.2vw + 1.2rem, 1.75rem);
+        /* 22px → 28px */
+
+        --font-h4: clamp(1.75rem, 2vw + 1.5rem, 2.25rem);
+        /* 28px → 36px */
+
+        --font-h3: clamp(2.25rem, 3vw + 1.8rem, 3rem);
+        /* 36px → 48px */
+
+        --font-h2: clamp(2.75rem, 5vw + 2rem, 4rem);
+        /* 44px → 64px */
+
+        --font-h1: clamp(2.5rem, 5vw + 1rem, 4rem);
+        /* 40px → 64px */
+
+
+
+
+
+        /*Font weight*/
+
+        --fw-light: 300;
+
+        --fw-regular: 400;
+
+        --fw-medium: 500;
+
+        --fw-semibold: 600;
+
+        --fw-bold: 700;
+
+        --fw-black: 800;
+
+
+
+
+
+        /*Black*/
+
+        --color-black-50: #e6e6e6;
+
+        --color-black-100: #b2b2b2;
+
+        --color-black-200: #8d8d8d;
+
+        --color-black-300: #5a5a5a;
+
+        --color-black-400: #393939;
+
+        --color-black-500: #020202;
+
+        --color-black-600: #070707;
+
+        --color-black-700: #060606;
+
+        --color-black-800: #040404;
+
+        --color-black-900: #000000;
+
+
+
+
+
+        /*White*/
+
+        --color-white-50: #fefefe;
+
+        --color-white-100: #fbfbfb;
+
+        --color-white-200: #f9f9f9;
+
+        --color-white-300: #f6f6f6;
+
+        --color-white-400: #f5f5f5;
+
+        --color-white-500: #f2f2f2;
+
+        --color-white-600: #dcdcdc;
+
+        --color-white-700: #acacac;
+
+        --color-white-800: #858585;
+
+        --color-white-900: #666666;
+
+
+
+
+
+        /*Pulse Blue*/
+
+        --color-pulse-blue-50: #e6f4fd;
+
+        --color-pulse-blue-100: #b0ddf8;
+
+        --color-pulse-blue-200: #8acdf4;
+
+        --color-pulse-blue-300: #54b6ef;
+
+        --color-pulse-blue-400: #33a8ec;
+
+        --color-pulse-blue-500: #0092e7;
+
+        --color-pulse-blue-600: #0085d2;
+
+        --color-pulse-blue-700: #0068a4;
+
+        --color-pulse-blue-800: #00507f;
+
+        --color-pulse-blue-900: #003d61;
+
+
+
+
+
+        /*Aero Blue*/
+
+        --color-aero-blue-50: #f2faff;
+
+        --color-aero-blue-100: #d7efff;
+
+        --color-aero-blue-200: #c3e7ff;
+
+        --color-aero-blue-300: #a8dbff;
+
+        --color-aero-blue-400: #97d5ff;
+
+        --color-aero-blue-500: #7dcaff;
+
+        --color-aero-blue-600: #72b8e8;
+
+        --color-aero-blue-700: #598fb5;
+
+        --color-aero-blue-800: #456f8c;
+
+        --color-aero-blue-900: #35556b;
+
+
+
+
+
+        /*Volt Aqua*/
+
+        --color-volt-aqua-50: #e6fff6;
+
+        --color-volt-aqua-100: #b0fee4;
+
+        --color-volt-aqua-200: #8afdd7;
+
+        --color-volt-aqua-300: #54fcc4;
+
+        --color-volt-aqua-400: #33fcb9;
+
+        --color-volt-aqua-500: #00fba7;
+
+        --color-volt-aqua-600: #00e498;
+
+        --color-volt-aqua-700: #00b277;
+
+        --color-volt-aqua-800: #008a5c;
+
+        --color-volt-aqua-900: #006946;
+
+
+
+
+
+        /*Mint Cyan*/
+
+        --color-mint-cyan-50: #f2fffc;
+
+        --color-mint-cyan-100: #d7fff7;
+
+        --color-mint-cyan-200: #c4fff3;
+
+        --color-mint-cyan-300: #a9ffee;
+
+        --color-mint-cyan-400: #98ffea;
+
+        --color-mint-cyan-500: #7effe5;
+
+        --color-mint-cyan-600: #73e8d0;
+
+        --color-mint-cyan-700: #59b5a3;
+
+        --color-mint-cyan-800: #458c7e;
+
+        --color-mint-cyan-900: #356b60;
+
+
+
+
+
+        /*Gradients*/
+
+        --main-gradient: linear-gradient(90deg,
+
+                        var(--color-volt-aqua-500) 1.36%,
+
+                        var(--color-pulse-blue-500) 73.34%);
+
+        --mint-surge-gradient: linear-gradient(270deg,
+
+                        var(--color-mint-cyan-500) 13.8%,
+
+                        var(--color-volt-aqua-500) 98.19%);
+
+        --blue-drift-gradient: linear-gradient(239deg,
+
+                        var(--color-aero-blue-500) 21.78%,
+
+                        var(--color-pulse-blue-500) 89.55%);
+
+        --main-gradient-2: linear-gradient(270deg, #00B277 -0.06%, #0092E7 100%);
+
+
+
+
+
+        /*Spacing*/
+
+        --space-xs: 0.25rem;
+        /* 4px */
+
+        --space-sm: 0.5rem;
+        /* 8px */
+
+        --space-md: 1rem;
+        /* 16px */
+
+        --space-lg: 2rem;
+        /* 32px */
+
+        --space-lg2: 3rem;
+        /* 48px */
+
+        --space-xl: 4rem;
+        /* 64px */
+
+        --space-2xl: 5rem;
+
+        --space-3xl: 6rem;
+
+        --space-4xl: 7rem;
+
+        --space-5xl: 8rem;
+
+        --space-6xl: 9rem;
+
+        --space-7xl: 10rem;
+
+        --space-8xl: 11rem;
+
+        --space-9xl: 12rem;
+
+        --space-10xl: 13rem;
+
+
+
+
+
+        --vh-full: 100vh;
+}
+
+
+* {
+        font-family: var(--font-host);
+}
+
+
+html.lenis {
+        height: auto;
+}
+
+.lenis.lenis-smooth {
+        scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+        overflow: hidden;   }

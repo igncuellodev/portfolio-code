@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/src/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-white-300">
+  <header class="fixed top-6 inset-x-0 z-50 px-4">
+    <nav class="mx-auto max-w-3xl bg-white shadow-xl rounded-full pl-6 pr-2 py-2 flex items-center justify-between transition-all duration-300">
+      
+      <div class="shrink-0">
+        <img src="src/assets/Logo.svg" alt="Main website Logo" class="h-6 w-auto hover:opacity-80 transition-opacity cursor-pointer" />
+      </div>
+  
+      <div class="flex items-center gap-8">
+        
+        <ul class="hidden md:flex items-center gap-8 text-sm text-black/60">
+          <li><a href="#meet-me" class="hover:text-black transition-colors ease-in">Meet Me</a></li>
+          <li><a href="#design-lab" class="hover:text-black transition-colors ease-in">DesignLab</a></li>
+        </ul>
+  
+        <a href="mailto:contact@igndesign.com" class="hidden sm:block bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] text-white text-sm px-10 py-2 rounded-full hover:opacity-50 transition-all ease-in active:scale-95">
+          Work With Me
+        </a>
+        
+        <button class="hamburger md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 focus:outline-none group pr-1" aria-label="Toggle menu">
+          <img src="src/assets/hamburguer-icon.svg" class="h-8" alt="navbar toogle button">
+        </button>
+      </div>
+    </nav>
+  
+    <div class="nav-container md:hidden absolute top-17 inset-x-4 bg-white border border-black/10 shadow-2xl rounded-3xl p-8 flex flex-col items-center gap-8 opacity-0 invisible -translate-y-2 transition-all duration-200 [&.active]:opacity-100 [&.active]:visible [&.active]:translate-y-0 z-40">
+      <ul class="flex flex-col items-center gap-6 font-normal text-base text-black-400">
+        <li><a href="#meet-me">Meet Me</a></li>
+        <li><a href="#design-lab">DesignLab</a></li>
+      </ul>
+      <a href="mailto:contact@igndesign.com" class="w-full text-center bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] text-white py-4 rounded-2xl font-normal text-base">
+        Work With Me
+      </a>
+    </div>
+  </header>
+
+
+  <!--Navbar section ending-->
+
+
+  <main>
+    
+
+    <!--Sizes: sm:TBD md:w-7xl lg:w-299 xl:w-8xl 2xl:w-360-->
+
+    <section id="hero-section" class="relative h-screen w-full overflow-hidden bg-[url('./assets/bg-hero-section.webp')] bg-cover bg-center bg-no-repeat lg:bg-[url('./assets/bg-hero-section-desktop.webp')] flex items-end">
+  
+      <div class="absolute inset-0 bg-linear-to-t from-[#020202] via-[#020202]/80 to-transparent"></div>
+    
+      <div class="relative z-10 w-full 2xl:max-w-550 mx-auto px-6 pb-12 md:px-14 md:pb-20">
+        
+        <div class="flex flex-col items-start gap-10">
+          
+          <div class="flex flex-col gap-4 max-w-3xl">
+            <h1 class="reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-100 text-white text-3xl font-semibold sm:text-5xl lg:text-7xl lg:leading-20 sm:leading-tight">
+              Building <span class="bg-linear-to-l from-[#00B277] to-[#0092E7] bg-clip-text text-transparent font-bold">Connections</span>, Not just interfaces
+            </h1>
+            
+            <p class="reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-400 text-slate-300 text-base font-normal sm:text-2xl max-w-2xl">
+              Bridging the gap between design and code. I empower the product lifecycle by aligning visual systems with functional engineering.
+            </p>
+          </div>
+    
+          <div class="reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-700 flex flex-col w-full gap-4 sm:flex-row sm:w-auto lg:gap-5">
+            <a href="#projects" class="gradient-button flex justify-center items-center md:w-3xs h-12 px-20 rounded-full transition-transform hover:scale-105">
+              Projects
+            </a>
+            <a href="#contact" class="text-white flex justify-center items-center md:w-3xs h-12 px-20 bg-white/10 rounded-full border border-mint-cyan-500/50 hover:bg-white/20 transition-all">
+              Contact Me
+            </a>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+
+  
+
+
+
+    <section id="meet-me" class="h-screen w-full">
+
+
+    </section>
+    
+
+
+  </main>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+  <script type="module" src="src/main.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+</body>
+
+</html>
