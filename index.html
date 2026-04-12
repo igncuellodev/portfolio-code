@@ -12,7 +12,7 @@
 <body class="bg-white-300">
   <header class="fixed top-6 inset-x-0 z-50 px-4">
     <nav
-      class="mx-auto max-w-3xl bg-white shadow-xl rounded-full pl-6 pr-2 py-2 flex items-center justify-between transition-all duration-300">
+      class="mx-auto max-w-3xl bg-white-500 shadow-xl rounded-full pl-6 pr-2 py-2 flex items-center justify-between transition-all duration-300">
 
 
       <div class="shrink-0">
@@ -30,7 +30,7 @@
         </ul>
 
 
-        <a href="mailto:contact@igndesign.com" class="hidden sm:block bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] text-white text-sm px-10 py-2 rounded-full 
+        <a href="mailto:contact@igndesign.com" class="hidden sm:block bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] text-white-500 text-sm px-10 py-2 rounded-full 
 hover:opacity-50 transition-all ease-in active:scale-95">
           Work With Me
         </a>
@@ -45,7 +45,7 @@ hover:opacity-50 transition-all ease-in active:scale-95">
     </nav>
 
 
-    <div class="nav-container md:hidden absolute top-17 inset-x-4 bg-white border border-black/10 shadow-2xl rounded-3xl p-8 flex flex-col 
+    <div class="nav-container md:hidden absolute top-20 inset-x-4 bg-white-500 border border-black/10 shadow-2xl rounded-3xl p-8 flex flex-col 
 items-center gap-8 opacity-0 invisible -translate-y-2 transition-all duration-200 [&.active]:opacity-100 [&.active]:visible [&.active]
 :translate-y-0 z-40">
       <ul class="flex flex-col items-center gap-6 font-normal text-base text-black-400">
@@ -53,7 +53,7 @@ items-center gap-8 opacity-0 invisible -translate-y-2 transition-all duration-20
         <li><a href="#design-lab">DesignLab</a></li>
       </ul>
       <a href="mailto:contact@igndesign.com"
-        class="w-full text-center bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] text-white py-4 rounded-2xl font-normal text-base">
+        class="w-full text-center bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] text-white-500 py-4 rounded-2xl font-normal text-base">
         Work With Me
       </a>
     </div>
@@ -64,23 +64,25 @@ items-center gap-8 opacity-0 invisible -translate-y-2 transition-all duration-20
 
   <!--Navbar section ending-->
 
+  <!--Max sizes: md:max-w-200, lg:max-w-5xl, xl:max-w-7xl, 2xl:max-w-450 -->
+
 
 
 
   <main>
     <section id="hero-section" class="flex flex-col items-center justify-end mx-auto relative h-dvh w-full overflow-hidden bg-[url('./assets/bg-hero-section.webp')] 
-bg-cover bg-center bg-no-repeat lg:bg-[url('./assets/bg-hero-section-desktop.webp')]">
+  bg-cover bg-center bg-no-repeat lg:bg-[url('./assets/bg-hero-section-desktop.webp')]">
       <div class="absolute inset-0 bg-linear-to-t from-[#020202] via-[#020202]/80 to-transparent"></div>
       <div id="hero-content"
-        class="z-20 max-w-360 w-full flex flex-col items-start pl-4 pr-4 gap-4 pb-6 lg:pb-20 lg:gap-8">
+        class="z-20 w-full flex flex-col items-start pl-4 pr-4 gap-4 pb-6 md:max-w-200 lg:pb-20 lg:max-w-5xl xl:max-w-7xl lg:gap-8 2xl:max-w-450">
 
 
-        <div class="">
-          <h1 class="text-white-500 text-4xl font-semibold max-w-197.5 lg:text-[5rem] lg:leading-22">Building <span
+        <div>
+          <h1 class="text-white-500 text-4xl font-semibold md:text-[3rem] md:max-w-125 lg:max-w-197.5 lg:text-[5rem] lg:leading-22">Building <span
               class="bg-linear-to-l from-[#00B277] to-[#0092E7] bg-clip-text text-transparent">Connections</span>, Not
             Just Interfaces.</h1>
         </div>
-        <div class="w-full flex flex-col items-start gap-4 max-w-197.5 lg:gap-10">
+        <div class="w-full flex flex-col items-start gap-4 md:max-w-125 lg:gap-10 lg:max-w-197.5">
           <p class="text-black-200 lg:text-[1.25rem]">Bridging the gap between design and code. I empower the product
             lifecycle by aligning visual systems with functional engineering to create cohesive systems that minimize
             friction and maximize delivery speed</p>
@@ -105,7 +107,7 @@ rounded-full pb-2.5 pt-2.5 hover:opacity-50 hover:-translate-y-2 transition-all 
     </section>
 
 
-    <section id="meet-me">
+    <section id="meet-me" class="md:max-w-200 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-450">
 
 
     </section>
