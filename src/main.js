@@ -1,33 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const navContainer = document.querySelector(".nav-container");
-  const navLinks = document.querySelectorAll(".nav-items a, .button-link");
+  // Seleccionamos todos los enlaces dentro del menú móvil
+  const navLinks = document.querySelectorAll(".nav-container a");
 
-  // Función para cerrar el menú
   const closeMenu = () => {
     hamburger.classList.remove("active");
     navContainer.classList.remove("active");
-    document.body.style.overflow = "auto"; // Libera el scroll
+    document.body.style.overflow = "auto";
   };
 
-  // Toggle del menú
   if (hamburger && navContainer) {
     hamburger.addEventListener("click", () => {
-      const isActive = hamburger.classList.toggle("active");
-      navContainer.classList.toggle("active");
-      
-      // Bonus de Rigor: Evita que el usuario scrollee cuando el menú está abierto
+      const isActive = navContainer.classList.toggle("active");
+      hamburger.classList.toggle("active");
       document.body.style.overflow = isActive ? "hidden" : "auto";
     });
 
-    // Cerrar al hacer click en los links (Ideal para anchors #)
+    // Cerrar al clickear cualquier link
     navLinks.forEach((link) => {
       link.addEventListener("click", closeMenu);
     });
 
-    // Cerrar si se redimensiona la pantalla (por si Manuel mueve la ventana)
+    // Cerrar si ensanchas la pantalla
     window.addEventListener("resize", () => {
-      if (window.innerWidth >= 1024) { // 1024px es el breakpoint 'lg' de Tailwind
+      if (window.innerWidth >= 768) { // Ajustado a md de Tailwind
         closeMenu();
       }
     });
