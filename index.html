@@ -16,7 +16,7 @@
 
 
       <div class="shrink-0">
-        <img src="src/assets/Logo.svg" alt="Main website Logo"
+        <img src="./src/assets/Logo.svg" alt="Main website Logo"
           class="h-6 w-auto hover:opacity-80 transition-opacity cursor-pointer" />
       </div>
 
@@ -39,7 +39,7 @@ hover:opacity-50 transition-all ease-in active:scale-95">
         <button
           class="hamburger md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 focus:outline-none group pr-1"
           aria-label="Toggle menu">
-          <img src="src/assets/hamburguer-icon.svg" class="h-8" alt="navbar toogle button">
+          <img src="./src/assets/hamburguer-icon.svg" class="h-8" alt="navbar toogle button">
         </button>
       </div>
     </nav>
@@ -70,15 +70,17 @@ items-center gap-8 opacity-0 invisible -translate-y-2 transition-all duration-20
 
 
   <main>
-    <section id="hero-section" class="flex flex-col items-center justify-end mx-auto relative h-dvh w-full overflow-hidden bg-[url('./assets/bg-hero-section.webp')] 
-  bg-cover bg-center bg-no-repeat lg:bg-[url('./assets/bg-hero-section-desktop.webp')]">
-      <div class="absolute inset-0 bg-linear-to-t from-[#020202] via-[#020202]/80 to-transparent"></div>
+    <section id="hero-section" class="flex flex-col items-center justify-end mx-auto relative h-dvh w-full overflow-hidden bg-[url('/src/assets/bg-hero-section.webp')] 
+  bg-cover bg-center bg-no-repeat lg:bg-[url('/src/assets/bg-hero-section-desktop.webp')]">
+      <div class="absolute inset-0 bg-linear-to-t from-black-500 via-black-500/80 to-transparent"></div>
       <div id="hero-content"
-        class="z-20 w-full flex flex-col items-start pl-4 pr-4 gap-4 pb-6 md:max-w-200 lg:pb-20 lg:max-w-5xl xl:max-w-7xl lg:gap-8 2xl:max-w-450">
+        class="z-20 w-full flex flex-col items-start pl-4 pr-4 gap-4 pb-14 md:max-w-200 lg:pb-20 lg:max-w-5xl xl:max-w-7xl lg:gap-8 2xl:max-w-450">
 
 
         <div>
-          <h1 class="text-white-500 text-4xl font-semibold md:text-[3rem] md:max-w-125 lg:max-w-197.5 lg:text-[5rem] lg:leading-22">Building <span
+          <h1
+            class="text-white-500 text-4xl font-semibold md:text-5xl md:max-w-125 lg:max-w-197.5 lg:text-7xl lg:leading-20">
+            Building <span
               class="bg-linear-to-l from-[#00B277] to-[#0092E7] bg-clip-text text-transparent">Connections</span>, Not
             Just Interfaces.</h1>
         </div>
@@ -107,7 +109,14 @@ rounded-full pb-2.5 pt-2.5 hover:opacity-50 hover:-translate-y-2 transition-all 
     </section>
 
 
-    <section id="meet-me" class="md:max-w-200 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-450">
+    <section id="intro" class="h-dvh flex justify-center items-center w-full mt-20">
+      <div id="intro-up"
+        class="border w-full flex flex-col items-center text-center gap-4 border-solid border-red-500 h-dvh pl-4 pr-4 lg:flex md:max-w-200 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-450">
+        <h2
+          class="w-fit text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-linear-to-l from-[#00B277] to-[#0092E7] bg-clip-text text-transparent lg:leading-relaxed">
+          Designing for development</h2>
+
+      </div>
 
 
     </section>
@@ -189,7 +198,6 @@ rounded-full pb-2.5 pt-2.5 hover:opacity-50 hover:-translate-y-2 transition-all 
 
 
   <script type="module" src="src/main.js"></script>
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 </body>
 
 
