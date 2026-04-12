@@ -1,33 +1,40 @@
 <!doctype html>
 <html>
 
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="/src/style.css" rel="stylesheet" />
 </head>
 
+
 <body class="bg-white-300">
   <header class="fixed top-6 inset-x-0 z-50 px-4">
     <nav
       class="mx-auto max-w-3xl bg-white shadow-xl rounded-full pl-6 pr-2 py-2 flex items-center justify-between transition-all duration-300">
+
 
       <div class="shrink-0">
         <img src="src/assets/Logo.svg" alt="Main website Logo"
           class="h-6 w-auto hover:opacity-80 transition-opacity cursor-pointer" />
       </div>
 
+
       <div class="flex items-center gap-8">
+
 
         <ul class="hidden md:flex items-center gap-8 text-sm text-black/60">
           <li><a href="#meet-me" class="hover:text-black transition-colors ease-in">Meet Me</a></li>
           <li><a href="#design-lab" class="hover:text-black transition-colors ease-in">DesignLab</a></li>
         </ul>
 
-        <a href="mailto:contact@igndesign.com"
-          class="hidden sm:block bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] text-white text-sm px-10 py-2 rounded-full hover:opacity-50 transition-all ease-in active:scale-95">
+
+        <a href="mailto:contact@igndesign.com" class="hidden sm:block bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] text-white text-sm px-10 py-2 rounded-full 
+hover:opacity-50 transition-all ease-in active:scale-95">
           Work With Me
         </a>
+
 
         <button
           class="hamburger md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 focus:outline-none group pr-1"
@@ -37,8 +44,10 @@
       </div>
     </nav>
 
-    <div
-      class="nav-container md:hidden absolute top-17 inset-x-4 bg-white border border-black/10 shadow-2xl rounded-3xl p-8 flex flex-col items-center gap-8 opacity-0 invisible -translate-y-2 transition-all duration-200 [&.active]:opacity-100 [&.active]:visible [&.active]:translate-y-0 z-40">
+
+    <div class="nav-container md:hidden absolute top-17 inset-x-4 bg-white border border-black/10 shadow-2xl rounded-3xl p-8 flex flex-col 
+items-center gap-8 opacity-0 invisible -translate-y-2 transition-all duration-200 [&.active]:opacity-100 [&.active]:visible [&.active]
+:translate-y-0 z-40">
       <ul class="flex flex-col items-center gap-6 font-normal text-base text-black-400">
         <li><a href="#meet-me">Meet Me</a></li>
         <li><a href="#design-lab">DesignLab</a></li>
@@ -51,15 +60,20 @@
   </header>
 
 
+
+
   <!--Navbar section ending-->
 
 
+
+
   <main>
-    <section id="hero-section"
-      class="flex flex-col items-center justify-end mx-auto relative h-dvh w-full overflow-hidden bg-[url('./assets/bg-hero-section.webp')] bg-cover bg-center bg-no-repeat lg:bg-[url('./assets/bg-hero-section-desktop.webp')]">
+    <section id="hero-section" class="flex flex-col items-center justify-end mx-auto relative h-dvh w-full overflow-hidden bg-[url('./assets/bg-hero-section.webp')] 
+bg-cover bg-center bg-no-repeat lg:bg-[url('./assets/bg-hero-section-desktop.webp')]">
       <div class="absolute inset-0 bg-linear-to-t from-[#020202] via-[#020202]/80 to-transparent"></div>
       <div id="hero-content"
         class="z-20 max-w-360 w-full flex flex-col items-start pl-4 pr-4 gap-4 pb-6 lg:pb-20 lg:gap-8">
+
 
         <div class="">
           <h1 class="text-white-500 text-4xl font-semibold max-w-197.5 lg:text-[5rem] lg:leading-22">Building <span
@@ -72,20 +86,57 @@
             friction and maximize delivery speed</p>
           <div class="w-full flex gap-4 max-w-125">
             <a href="#projects"
-              class="w-full flex text-white-500 justify-center bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] rounded-full pb-2.5 pt-2.5 hover:opacity-50 hover:transform hover:-translate-y-2 transition-all duration-300 ease-in lg:pt-3.5 lg:pb-3.5">Projects</a>
+              class="w-full flex text-white-500 justify-center bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] rounded-full pb-2.5 pt-2.5 
+hover:opacity-50 hover:transform hover:-translate-y-2 transition-all duration-300 ease-in lg:pt-3.5 lg:pb-3.5">Projects</a>
+
 
             <a href="#projects"
-              class="w-full flex justify-center items-center text-white-500 backdrop-blur-xs bg-white/10 border border-solid border-white/15 rounded-full pb-2.5 pt-2.5 hover:opacity-50 hover:-translate-y-2 transition-all ease-in duration-300  lg:pt-3.5 lg:pb-3.5">Contact
+              class="w-full flex justify-center items-center text-white-500 backdrop-blur-xs bg-white/10 border border-solid border-white/15 
+rounded-full pb-2.5 pt-2.5 hover:opacity-50 hover:-translate-y-2 transition-all ease-in duration-300  lg:pt-3.5 lg:pb-3.5">Contact
               Me</a>
           </div>
         </div>
       </div>
 
+
+      <!--Create vesrion on github-->
+
+
     </section>
 
+
     <section id="meet-me">
-      
+
+
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -125,8 +176,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
   <script type="module" src="src/main.js"></script>
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 </body>
+
 
 </html>
