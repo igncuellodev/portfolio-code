@@ -30,3 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+const lenis = new Lenis({
+  duration: 2.2,
+  lerp: 0.03,
+  wheelMultiplier: 1.6,
+  gestureOrientation: 'vertical',
+  normalizeWheel: true,
+  smoothWheel: true
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);

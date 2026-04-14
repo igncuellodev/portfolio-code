@@ -18,7 +18,7 @@
       </div>
 
       <div class="flex items-center gap-8">
-        <ul class="hidden md:flex items-center gap-8 text-sm text-black/60">
+        <ul class="hidden md:flex items-center gap-8 text-base text-black/60">
           <li><a href="#meet-me" class="hover:text-black transition-colors ease-in">Meet Me</a></li>
           <li><a href="#design-lab" class="hover:text-black transition-colors ease-in">DesignLab</a></li>
         </ul>
@@ -65,7 +65,7 @@
         </div>
 
         <div class="w-full flex flex-col items-start gap-10 md:max-w-125 lg:max-w-197.5">
-          <p class="text-black-200 text-[clamp(1rem,0.5vw+0.9rem,1.25rem)]">
+          <p class="text-black-200 p-fluid">
             Bridging the gap between design and code. I empower the product lifecycle by aligning visual systems with
             functional engineering to create cohesive systems.
           </p>
@@ -112,7 +112,7 @@
     
       </div> </section>
 
-    <section id="intro" class="flex justify-center w-full mt-20 2xl:mt-40 bg-white-500">
+    <section id="intro" class="flex justify-center h-212 w-full mt-20 2xl:mt-40 bg-white-500 sticky top-30">
       <div id="intro-content"
         class="w-full flex flex-col items-center gap-12 h-fit pl-4 pr-4 max-width-sizes">
         <div class="flex flex-col gap-2">
@@ -133,9 +133,19 @@
         </div>
       </div>
     </section>
+
+    <section id="my-stack" class="sticky top-0 w-full flex justify-center items-center bg-[url('/src/assets/bg-hero-section.webp')] bg-cover bg-no-repeat bg-center lg:bg-[url('/src/assets/bg-hero-section-desktop.webp')]">
+      <div class="absolute inset-0 bg-linear-to-t from-black-500 via-black-500/80 to-transparent"></div>
+      <div class="max-width-sizes mt-20 border border-solid border-red-500 h-dvh">
+
+        
+
+      </div><!--Main wrapper ending-->
+    </section>
   </main>
 
   <script type="module" src="src/main.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 </body>
 
 </html>
