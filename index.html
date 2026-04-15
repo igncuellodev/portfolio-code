@@ -134,89 +134,113 @@
       </div>
     </section>
 
-    <section id="my-stack" class="sticky top-0 z-10 w-full min-h-dvh flex flex-col justify-center items-center bg-[url('/src/assets/bs-bone-mobile.webp')] lg:bg-[url('/src/assets/bs-bone-desktop.webp')] bg-cover bg-no-repeat bg-center">
+    <div class="relative h-dvh w-full"> 
   
-      <div class="absolute inset-0 bg-black-500/90 pointer-events-none"></div>
-    
-      <div class="relative z-20 w-full max-width-sizes mx-auto flex flex-col justify-center items-center px-6 py-20">
+      <section id="my-stack" class=" z-10 w-full h-dvh flex flex-col justify-start items-center bg-[url('/src/assets/bs-bone-mobile.webp')] lg:bg-[url('/src/assets/bs-bone-desktop.webp')] bg-cover bg-no-repeat bg-center md:justify-center overflow-hidden">
         
-        <div class="mb-12 md:mb-16">
-          <h2 class="h2-fluid title-gradient text-center font-bold">My tech stack</h2>
-        </div>
+        <div class="absolute inset-0 bg-black-500/90 pointer-events-none"></div>
     
-        <div class="grid grid-cols-2 lg:grid-cols-5 gap-8 md:gap-10 lg:gap-12 w-fit">
+        <div class="relative z-20 w-full max-width-sizes mx-auto flex flex-col justify-start items-center px-6 py-10 md:py-20">
           
-          <div class="flex flex-col items-center gap-3">
-            <div class="group stack-element w-26.5 h-26.5 xl:w-32 xl:h-32">
-              <img src="/figma-icon.svg" alt="Figma" class="w-12 h-12 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
-            </div>
-            <p class="p-fluid text-white-300 font-medium">Figma</p>
+          <div class="mb-10 md:mb-16">
+            <h2 class="h2-fluid title-gradient text-center font-bold">My tech stack</h2>
           </div>
     
-          <div class="flex flex-col items-center gap-3">
-            <div class="group stack-element w-26.5 h-26.5 xl:w-32 xl:h-32">
-              <img src="/html-icon.svg" alt="HTML5" class="w-12 h-12 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+          <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-10 lg:gap-12 w-fit">
+            
+            <div class="flex flex-col items-center gap-3">
+              <div class="group stack-element w-22.5 h-22.5 xl:w-32 xl:h-32">
+                <img src="/figma-icon.svg" alt="Figma" class="w-10 h-10 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+              </div>
+              <p class="p-fluid text-white-300 font-medium">Figma</p>
             </div>
-            <p class="p-fluid text-white-300 font-medium">HTML5</p>
-          </div>
     
-          <div class="flex flex-col items-center gap-3">
-            <div class="group stack-element w-26.5 h-26.5 xl:w-32 xl:h-32">
-              <img src="/css-icon.svg" alt="CSS3" class="w-12 h-12 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+            <div class="flex flex-col items-center gap-3">
+              <div class="group stack-element w-22.5 h-22.5 xl:w-32 xl:h-32">
+                <img src="/html-icon.svg" alt="HTML5" class="w-10 h-10 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+              </div>
+              <p class="p-fluid text-white-300 font-medium">HTML5</p>
             </div>
-            <p class="p-fluid text-white-300 font-medium">CSS3</p>
-          </div>
     
-          <div class="flex flex-col items-center gap-3">
-            <div class="group stack-element w-26.5 h-26.5 xl:w-32 xl:h-32">
-              <img src="/js-icon.svg" alt="JavaScript" class="w-12 h-12 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+            <div class="flex flex-col items-center gap-3">
+              <div class="group stack-element w-22.5 h-22.5 xl:w-32 xl:h-32">
+                <img src="/css-icon.svg" alt="CSS3" class="w-10 h-10 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+              </div>
+              <p class="p-fluid text-white-300 font-medium">CSS3</p>
             </div>
-            <p class="p-fluid text-white-300 font-medium">JavaScript</p>
-          </div>
     
-          <div class="flex flex-col items-center gap-3">
-            <div class="group stack-element w-26.5 h-26.5 xl:w-32 xl:h-32">
-              <img src="/tailwind-icon.svg" alt="Tailwind" class="w-12 h-12 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+            <div class="flex flex-col items-center gap-3">
+              <div class="group stack-element w-22.5 h-22.5 xl:w-32 xl:h-32">
+                <img src="/js-icon.svg" alt="JavaScript" class="w-10 h-10 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+              </div>
+              <p class="p-fluid text-white-300 font-medium">JavaScript</p>
             </div>
-            <p class="p-fluid text-white-300 font-medium">Tailwind CSS</p>
-          </div>
     
-          <div class="flex flex-col items-center gap-3">
-            <div class="group stack-element w-26.5 h-26.5 xl:w-32 xl:h-32">
-              <img src="/blender-icon.svg" alt="Blender" class="w-12 h-12 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+            <div class="flex flex-col items-center gap-3">
+              <div class="group stack-element w-22.5 h-22.5 xl:w-32 xl:h-32">
+                <img src="/tailwind-icon.svg" alt="Tailwind" class="w-10 h-10 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+              </div>
+              <p class="p-fluid text-white-300 font-medium">Tailwind CSS</p>
             </div>
-            <p class="p-fluid text-white-300 font-medium">Blender</p>
-          </div>
     
-          <div class="flex flex-col items-center gap-3">
-            <div class="group stack-element w-26.5 h-26.5 xl:w-32 xl:h-32">
-              <img src="/wp-icon.svg" alt="Wordpress" class="w-12 h-12 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+            <div class="flex flex-col items-center gap-3">
+              <div class="group stack-element w-22.5 h-22.5 xl:w-32 xl:h-32">
+                <img src="/blender-icon.svg" alt="Blender" class="w-10 h-10 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+              </div>
+              <p class="p-fluid text-white-300 font-medium">Blender</p>
             </div>
-            <p class="p-fluid text-white-300 font-medium">WordPress</p>
-          </div>
     
-          <div class="flex flex-col items-center gap-3">
-            <div class="group stack-element w-26.5 h-26.5 xl:w-32 xl:h-32">
-              <img src="/elementor-icon.svg" alt="Elementor" class="w-12 h-12 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+            <div class="flex-col hidden items-center gap-3 md:flex">
+              <div class="group stack-element w-22.5 h-22.5 xl:w-32 xl:h-32">
+                <img src="/wp-icon.svg" alt="Wordpress" class="w-10 h-10 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+              </div>
+              <p class="p-fluid text-white-300 font-medium">WordPress</p>
             </div>
-            <p class="p-fluid text-white-300 font-medium">Elementor</p>
-          </div>
     
-          <div class="flex flex-col items-center gap-3">
-            <div class="group stack-element w-26.5 h-26.5 xl:w-32 xl:h-32">
-              <img src="/webflow-icon.svg" alt="Webflow" class="w-12 h-12 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+            <div class="flex-col hidden items-center gap-3 md:flex">
+              <div class="group stack-element w-22.5 h-22.5 xl:w-32 xl:h-32">
+                <img src="/elementor-icon.svg" alt="Elementor" class="w-10 h-10 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+              </div>
+              <p class="p-fluid text-white-300 font-medium">Elementor</p>
             </div>
-            <p class="p-fluid text-white-300 font-medium">Webflow</p>
-          </div>
     
-          <div class="flex flex-col items-center gap-3">
-            <div class="group stack-element w-26.5 h-26.5 xl:w-32 xl:h-32">
-              <img src="/framer-icon.svg" alt="Framer" class="w-12 h-12 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+            <div class="flex flex-col items-center gap-3">
+              <div class="group stack-element w-22.5 h-22.5 xl:w-32 xl:h-32">
+                <img src="/webflow-icon.svg" alt="Webflow" class="w-10 h-10 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+              </div>
+              <p class="p-fluid text-white-300 font-medium">Webflow</p>
             </div>
-            <p class="p-fluid text-white-300 font-medium">Framer</p>
-          </div>
     
-        </div> </div> </section>
+            <div class="flex flex-col items-center gap-3">
+              <div class="group stack-element w-22.5 h-22.5 xl:w-32 xl:h-32">
+                <img src="/framer-icon.svg" alt="Framer" class="w-10 h-10 xl:w-14 xl:h-14 object-contain transition-opacity opacity-80 group-hover:opacity-100">
+              </div>
+              <p class="p-fluid text-white-300 font-medium">Framer</p>
+            </div>
+    
+          </div> 
+        </div> 
+      </section>
+    </div>
+    
+    <section id="my-skills" class="relative z-20 w-full min-h-screen bg-white-500 py-20 transition-all duration-1000 ease-out md:flex md:justify-center">
+      <div class="w-full max-width-sizes pl-4 pr-4 flex justify-start flex-col border-2">
+        <h2 class="h2-fluid w-fit font-bold title-gradient">My Skills</h2>
+        <div>
+          <p class="text-gray-600 p-fluid w-200">
+            Building scalable visual foundations that bridge aesthetic intent with functional consistency. I enforce design integrity through components, variables, and documentation.
+          </p>
+
+        </div>
+        </div>
+    </section>
+  
+
+
+
+
+
+        
   
 
 
