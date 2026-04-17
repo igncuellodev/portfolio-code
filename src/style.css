@@ -141,3 +141,23 @@ html.lenis, html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Mueve el track exactamente la mitad de su ancho */
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  /* Ajusta los segundos para cambiar la velocidad (40s es un ritmo elegante) */
+  animation: infinite-scroll 40s linear infinite;
+}
+
+/* Evita que los logos se compriman cuando el track es largo */
+.animate-infinite-scroll > img {
+  flex-shrink: 0;
+}
