@@ -46,3 +46,57 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+// Este bloque es el mismo que ya tienes y funciona perfecto.
+// Al añadir 'reveal', 'opacity-0' y 'translate-x-10' al HTML,
+// este script automáticamente limpiará esas clases al hacer scroll.
+document.addEventListener("DOMContentLoaded", () => {
+  const observerOptions = {
+    root: null,
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove(
+          'opacity-0',
+          'translate-y-10',
+          '-translate-x-10', // <-- Asegúrate de tener este remoción en tu script original
+          'translate-x-10', // <-- Asegúrate de tener este remoción en tu script original
+          'scale-50',
+          'blur-md'
+        );
+
+        entry.target.classList.add(
+          'opacity-100',
+          'translate-x-0',
+          'translate-y-0',
+          'scale-100',
+          'blur-0'
+        );
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  const revealElements = document.querySelectorAll('.reveal');
+  revealElements.forEach(el => observer.observe(el));
+});
+
+window.addEventListener("scroll", () => {
+  const images = document.querySelectorAll('.scroll-expand');
+  
+  images.forEach(img => {
+    const rect = img.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    // Calculamos qué tan centrada está la imagen (0 a 1)
+    const intersectRatio = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
+    
+    // Efecto elástico: escala entre 1 y 1.25 basado en el scroll
+    const scale = 1 + (intersectRatio * 0.25); 
+    
+    img.style.transform = `scale(${scale})`;
+  });
+});
