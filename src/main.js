@@ -100,3 +100,45 @@ window.addEventListener("scroll", () => {
     img.style.transform = `scale(${scale})`;
   });
 });
+
+const langButton = document.getElementById('language-toggle');
+const btnEn = document.getElementById('lang-en');
+const btnEs = document.getElementById('lang-es');
+let currentLang = 'en';
+
+langButton.addEventListener('click', () => {
+  currentLang = currentLang === 'en' ? 'es' : 'en';
+
+  // 1. Animación del Botón (Ease-in en el cambio de fondo)
+  const gradientClass = 'bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)]';
+  
+  if (currentLang === 'es') {
+    // Activar ES
+    btnEs.classList.add('bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)]', 'text-white-500');
+    btnEs.classList.remove('text-black/40');
+    // Desactivar EN
+    btnEn.classList.remove('bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)]', 'text-white-500');
+    btnEn.classList.add('text-black/40');
+  } else {
+    // Activar EN
+    btnEn.classList.add('bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)]', 'text-white-500');
+    btnEn.classList.remove('text-black/40');
+    // Desactivar ES
+    btnEs.classList.remove('bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)]', 'text-white-500');
+    btnEs.classList.add('text-black/40');
+  }
+
+  // 2. Traducción (Tu lógica que funciona de 10)
+  document.querySelectorAll('[data-en]').forEach(el => {
+    const translation = el.getAttribute(`data-${currentLang}`);
+    if (el.tagName === 'H1' || el.classList.contains('h1-fluid')) {
+      const word = currentLang === 'en' ? 'Connections' : 'Conexiones';
+      const span = `<span class="bg-linear-to-l from-[#00B277] to-[#0092E7] bg-clip-text text-transparent">${word}</span>`;
+      el.innerHTML = translation.replace(word, span);
+    } else {
+      el.textContent = translation;
+    }
+  });
+
+  document.documentElement.lang = currentLang;
+});
