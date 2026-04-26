@@ -4,13 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ignacio Cuello </title>
     <link rel="stylesheet" href="/src/style.css">
 </head>
 
 <body>
-    <h1 class="text-8xl">Hola Mundo</h1>
+    <header class="fixed top-6 inset-x-0 z-50 px-4">
+        <nav
+            class="mx-auto max-w-3xl bg-white-500 shadow-xl rounded-full pl-6 pr-2 py-2 flex items-center justify-between transition-all duration-300">
+            <div class="shrink-0">
+                <a href="index.html"><img src="/Logo.svg" alt="Main website Logo"
+                        class="h-6 w-auto hover:opacity-80 transition-opacity cursor-pointer" loading="lazy" /></a>
+            </div>
+            <div class="flex items-center gap-8">
+                <ul class="hidden md:flex items-center gap-8 text-base text-black/60">
+                    <li><a href="#meet-me" class="hover:text-black transition-colors ease-in" data-en="Meet Me"
+                            data-es="Sobre mí">Meet Me</a></li>
+                    <li><a href="#my-design-lab" class="hover:text-black transition-colors ease-in" data-en="DesignLab"
+                            data-es="Laboratorio">DesignLab</a></li>
+                </ul>
+                <a href="mailto:contact@igndesign.com"
+                    class="hidden sm:block bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] text-white-500 text-sm px-10 py-2 rounded-full hover:opacity-50 transition-all ease-in active:scale-95"
+                    data-en="Work With Me" data-es="Trabaja conmigo">
+                    Work With Me
+                </a>
+                <button
+                    class="hamburger md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 focus:outline-none group pr-1"
+                    aria-label="Toggle menu">
+                    <img src="/hamburguer-icon.svg" class="h-8" alt="navbar toggle button" />
+                </button>
+            </div>
+        </nav>
 
+        <div class="nav-container md:hidden absolute top-20 inset-x-4 bg-white-500 border border-black/10 shadow-2xl rounded-3xl p-8 flex flex-col items-center gap-8 opacity-0 invisible -translate-y-2 transition-all duration-200 [&.active]:opacity-100 [&.active]:visible [&.active]
+         :-translate-y-0">
+            <ul class="flex flex-col items-center gap-6 font-normal text-base text-black-400">
+                <li><a href="#meet-me" data-en="Meet Me" data-es="Sobre mí">Meet Me</a></li>
+                <li><a href="#my-design-lab" data-en="DesignLab" data-es="Laboratorio">DesignLab</a></li>
+            </ul>
+            <a href="mailto:contact@igndesign.com"
+                class="w-full text-center bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] text-white-500 py-4 rounded-2xl font-normal text-base"
+                data-en="Work With Me" data-es="Trabaja conmigo">
+                Work With Me
+            </a>
+        </div>
+    </header>
+
+
+
+    <main>
+        <section id="hero-section"
+            class="flex flex-col items-center justify-end mx-auto relative h-dvh w-full overflow-hidden bg-[url('/src/assets/medigo-project-cover.webp')] bg-cover bg-center bg-no-repeat lg:bg-[url('/src/assets/medigo-project-cover.webp')]">
+            <div class="absolute inset-0 bg-linear-to-t from-black-500 via-black-500/80 to-black-500/40"></div>
+            <div id="start-medigo" class="z-20 w-full flex flex-col items-start pl-4 pr-4 gap-4 pb-14 max-width-sizes">
+                <div class="reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out">
+                    <h1 class="title-gradient h1-fluid font-semibold md:max-w-125 lg:max-w-197.5 leading-[1.1]">
+                        MediGO
+                    </h1>
+                </div>
+                <div class="w-full flex flex-col items-start gap-10 md:max-w-125 lg:max-w-120">
+                    <p class="reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-300 text-black-200 p-fluid"
+                        data-en="Bridging the gap between design and code. I empower the product lifecycle by aligning visual systems with functional engineering to create cohesive systems."
+                        data-es="Cerrando la brecha entre diseño y código. Potencio el ciclo de vida del producto alineando sistemas visuales con ingeniería funcional para crear sistemas cohesivos.">
+                        Leveraging Artificial Intelligence to redefine diagnostic accuracy
+                    </p>
+                </div>
+                <div class="tech-icons flex gap-4 items-center">
+                    <img src="/figma-icon.svg" alt="Figma Icon"
+                        class="w-5 reveal opacity-0 scale-50 blur-md transition-all duration-700 delay-300 ease-in">
+                    <img src="/ai-icon.svg" alt="Figma Icon"
+                        class="w-7 reveal opacity-0 scale-50 blur-md transition-all duration-700 delay-400 ease-in">
+                    <img src="/psd-icon.svg" alt="Figma Icon"
+                        class="w-7 reveal opacity-0 scale-50 blur-md transition-all duration-700 delay-500 ease-in">
+                    <img src="/blender-icon.svg" alt="Figma Icon"
+                        class="w-8 reveal opacity-0 scale-50 blur-md transition-all duration-700 delay-600 ease-in">
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
