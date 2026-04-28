@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/src/style.css">
 </head>
 
-<body>
+<body class="bg-white-500">
     <header class="fixed top-6 inset-x-0 z-50 px-4">
         <nav
             class="mx-auto max-w-3xl bg-white-500 shadow-xl rounded-full pl-6 pr-2 py-2 flex items-center justify-between transition-all duration-300">
@@ -126,8 +126,13 @@
 
                 <div class="2nd-content lg:w-full flex flex-col gap-8">
                     <div class="problem flex flex-col gap-4">
-                        <h2 class="title-gradient w-fit h2-fluid">What was the problem?</h2>
-                        <p class="p-fluid text-black-300">Chile’s healthcare infrastructure is under immense strain due
+                        <h2
+                            class="title-gradient w-fit h2-fluid reveal opacity-0 translate-y-10 transition-all duration-1000">
+                            What
+                            was the problem?</h2>
+                        <p
+                            class="p-fluid text-black-300 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-200">
+                            Chile’s healthcare infrastructure is under immense strain due
                             to a chronic
                             shortage of specialized personnel relative to
                             the burgeoning patient population. Compounding this systemic issue is the absence of
@@ -138,8 +143,12 @@
 
 
                     <div class="problem flex flex-col gap-4">
-                        <h2 class="title-gradient w-fit h2-fluid">Project Overview</h2>
-                        <p class="p-fluid text-black-300">MediGO is an AI–powered healthcare that analyzes B.A.M. and
+                        <h2
+                            class="title-gradient w-fit h2-fluid reveal opacity-0 translate-y-10 transition-all duration-1000 delay-400">
+                            Project Overview</h2>
+                        <p
+                            class="p-fluid text-black-300 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-600">
+                            MediGO is an AI–powered healthcare that analyzes B.A.M. and
                             genetic profiles to suggest tailored treatments. We are
                             transforming patient care by providing proactive, personalized solutions that reduce
                             systemic inefficiencies in global
@@ -150,6 +159,128 @@
 
             </div><!--max width sizes container-->
         </section>
+
+        <section id="mvp-timeline" class="py-20 lg:mt-40 bg-white-500 relative z-20 overflow-hidden">
+
+            <div class="max-width-sizes mx-auto px-4">
+
+                <div class="title-wrapper w-full flex justify-center mb-20">
+                    <h2 class="w-fit text-center h2-fluid title-gradient reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out"
+                        data-en="Design Process" data-es="Proceso de Diseño">
+                        MVP Timeline
+                    </h2>
+                </div>
+                <div class="relative wrap overflow-hidden p-0 h-full">
+
+                    <div class="absolute hidden md:block w-px bg-black/10 top-6 h-[calc(100%-48px)]" style="left: 50%">
+                    </div>
+                    <div class="absolute md:hidden w-px bg-black/10 top-6 h-[calc(100%-48px)]" style="left: 20px"></div>
+                    <div
+                        class="mb-16 flex md:justify-start items-center w-full relative reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out">
+
+                        <div
+                            class="z-20 shrink-0 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] shadow-xl rounded-full absolute left-0 md:left-1/2 md:-ml-6">
+                            <span class="font-bold text-white-500 text-base md:text-lg">1</span>
+                        </div>
+                        <div
+                            class="bg-white-500 border border-white-700/45 rounded-2xl w-full md:w-[38%] ml-14 md:ml-[7%] px-6 py-6 transition-all duration-300 group">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="w-14 h-14 shrink-0 rounded-xl bg-[#00B277]/10 flex items-center justify-center">
+                                    <img src="/user-research-icon.svg" alt="user research icon" class="w-10 h-10">
+
+                                </div>
+                                <h3 class="font-bold h3-fluid lg:h5-fluid title-gradient leading-tight">User Research
+                                </h3>
+                            </div>
+                            <p class="p-fluid text-black-400">
+                                Conducting in-depth user interviews and journeys to effectively identify and analyze
+                                critical
+                                pain points.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="mb-16 flex md:justify-end items-center w-full relative reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out md:delay-150">
+
+                        <div
+                            class="z-20 shrink-0 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] shadow-xl rounded-full absolute left-0 md:left-1/2 md:-ml-6">
+                            <span class="font-bold text-white-500 text-base md:text-lg">2</span>
+                        </div>
+                        <div
+                            class="bg-white-500 border border-white-700/45 rounded-2xl w-full md:w-[38%] ml-14 md:mr-[7%] px-6 py-6 transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="w-14 h-14 shrink-0 rounded-xl bg-[#0092E7]/10 flex items-center justify-center text-[#0092E7]">
+                                    <img src="/architecture-icon.svg" alt="Architecture icon" class="w-10 h-10">
+                                </div>
+                                <h3 class="font-bold h3-fluid lg:h5-fluid title-gradient leading-tight">Architecture
+                                </h3>
+                            </div>
+                            <p class="p-fluid text-black-300">
+                                Defining the core product structure through sitemaps, site user flows, and high-fidelity
+                                wireframing.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="mb-16 flex md:justify-start items-center w-full relative reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out md:delay-300">
+
+                        <div
+                            class="z-20 shrink-0 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] shadow-xl rounded-full absolute left-0 md:left-1/2 md:-ml-6">
+                            <span class="font-bold text-white-500 text-base md:text-lg">3</span>
+                        </div>
+                        <div
+                            class="bg-white-500 border border-white-700/45 rounded-2xl w-full md:w-[38%] ml-14 md:ml-[7%] px-6 py-6 transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="w-14 h-14 shrink-0 rounded-xl bg-[#00B277]/10 flex items-center justify-center text-[#00B277]">
+                                    <img src="/prototyping-icon.svg" alt="Prototyping icon" class="w-10 h-10">
+                                </div>
+                                <h3 class="font-bold title-gradient h3-fluid lg:h5-fluid leading-tight">Prototyping</h3>
+                            </div>
+                            <p class="p-fluid text-black-300">
+                                Developing complex styleguides and design systems to create interactive and
+                                high-fidelity UI
+                                solutions.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex md:justify-end items-center w-full relative reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out md:delay-450">
+
+                        <div
+                            class="z-20 shrink-0 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)] shadow-xl rounded-full absolute left-0 md:left-1/2 md:-ml-6">
+                            <span class="font-bold text-white-500 text-base md:text-lg">4</span>
+                        </div>
+                        <div
+                            class="bg-white-500 border border-white-700/45 rounded-2xl w-full md:w-[38%] ml-14 md:mr-[7%] px-6 py-6 transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="w-14 h-14 shrink-0 rounded-xl bg-[#0092E7]/10 flex items-center justify-center text-[#0092E7]">
+                                    <img src="/validation-icon.svg" alt="Prototyping icon" class="w-10 h-10">
+                                </div>
+                                <h3 class="font-bold title-gradient h3-fluid lg:h5-fluid leading-tight">Validation</h3>
+                            </div>
+                            <p class="p-fluid text-black-300">
+                                Performing moderated testing and heat map analysis to effectively refine and iterate the
+                                final
+                                product.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
 
 
 
