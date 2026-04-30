@@ -162,3 +162,25 @@ html.lenis, html.lenis body {
 .animate-infinite-scroll > img {
   flex-shrink: 0;
 }
+
+
+@starting-style {
+  #contact-modal[open] {
+    opacity: 0;
+    transform: scale(0.95) translateY(1rem);
+  }
+  
+  #contact-modal[open]::backdrop {
+    background-color: transparent;
+    backdrop-filter: blur(0);
+  }
+}
+
+/* Asegurar transición suave del backdrop al cerrar */
+#contact-modal::backdrop {
+  transition: 
+    display 0.3s allow-discrete, 
+    overlay 0.3s allow-discrete, 
+    background-color 0.3s, 
+    backdrop-filter 0.3s;
+}
