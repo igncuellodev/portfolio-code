@@ -115,17 +115,17 @@ langButton.addEventListener('click', () => {
   if (currentLang === 'es') {
     // Activar ES
     btnEs.classList.add('bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)]', 'text-white-500');
-    btnEs.classList.remove('text-black/40');
+    btnEs.classList.remove('text-black-400');
     // Desactivar EN
     btnEn.classList.remove('bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)]', 'text-white-500');
-    btnEn.classList.add('text-black/40');
+    btnEn.classList.add('text-black-400');
   } else {
     // Activar EN
     btnEn.classList.add('bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)]', 'text-white-500');
-    btnEn.classList.remove('text-black/40');
+    btnEn.classList.remove('text-black-400');
     // Desactivar ES
     btnEs.classList.remove('bg-[linear-gradient(270deg,#00B277_-0.06%,#0092E7_100%)]', 'text-white-500');
-    btnEs.classList.add('text-black/40');
+    btnEs.classList.add('text-black-400');
   }
 
   // 2. Traducción (Tu lógica que funciona de 10)
@@ -143,10 +143,8 @@ langButton.addEventListener('click', () => {
   document.documentElement.lang = currentLang;
 });
 
-
 import { createClient } from '@supabase/supabase-js'
 
-// 1. Inicialización de Supabase
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 const supabase = createClient(supabaseUrl, supabaseAnonKey)
@@ -156,23 +154,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const successState = document.getElementById('success-state');
   const sectionStatus = document.getElementById('section-form-status');
   const resetBtn = document.getElementById('reset-form');
+  const submitBtn = document.getElementById('section-submit-btn');
   
-  // Guardamos el botón y su texto original fuera para acceder fácilmente
-  const submitBtn = sectionForm?.querySelector('button[type="submit"]');
   const originalBtnText = submitBtn?.getAttribute('data-en') || 'Send Message';
 
-  // Función para volver al formulario y resetear el botón
-  const showForm = () => {
-    // 1. Resetear el estado del botón
+  // --- LÓGICA DE TURNSTILE ---
+  window.onTurnstileSuccess = function(token) {
     if (submitBtn) {
       submitBtn.disabled = false;
+      submitBtn.classList.remove('cursor-not-allowed', 'opacity-50');
+      submitBtn.classList.add('cursor-pointer', 'opacity-100');
+      sectionStatus.textContent = ''; 
+    }
+  };
+
+  const showForm = () => {
+    // Resetear botón a estado bloqueado por seguridad hasta que Turnstile valide de nuevo
+    if (submitBtn) {
+      submitBtn.disabled = true;
       submitBtn.textContent = originalBtnText;
+      submitBtn.classList.add('cursor-not-allowed', 'opacity-50');
     }
     
-    // 2. Limpiar mensajes de error previos
     if (sectionStatus) sectionStatus.textContent = '';
+    if (typeof turnstile !== 'undefined') turnstile.reset(); // Reiniciar widget
 
-    // 3. Animación de regreso
     successState.classList.add('hidden', 'opacity-0', 'translate-y-4');
     sectionForm.classList.remove('hidden');
     
@@ -184,16 +190,25 @@ document.addEventListener("DOMContentLoaded", () => {
   sectionForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    const formData = new FormData(sectionForm);
+    const turnstileToken = formData.get('cf-turnstile-response');
+
+    if (!turnstileToken) {
+      sectionStatus.textContent = 'Security check failed. Please try again.';
+      sectionStatus.className = 'text-center text-sm font-medium text-rose-500 mt-4';
+      return;
+    }
+
     // Estado de carga
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
     sectionStatus.textContent = '';
 
-    const formData = new FormData(sectionForm);
     const payload = {
       name: formData.get('full_name'),
       email: formData.get('email'),
       message: formData.get('message')
+      // Si validas el token en el backend, deberías enviarlo aquí también
     };
 
     try {
@@ -203,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (error) throw error;
 
-      // --- ANIMACIÓN DE ÉXITO ---
+      // Animación de éxito
       sectionForm.classList.add('opacity-0', 'pointer-events-none');
       
       setTimeout(() => {
@@ -220,10 +235,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     } catch (err) {
       console.error('Error enviando a Supabase:', err.message);
-      sectionStatus.textContent = 'Hubo un error al enviar.';
+      sectionStatus.textContent = 'Error sending message. Please try again.';
       sectionStatus.className = 'text-center text-sm font-medium text-rose-500 mt-4';
       
-      // Restaurar botón solo si hay error para permitir reintentar
       submitBtn.disabled = false;
       submitBtn.textContent = originalBtnText;
     }
