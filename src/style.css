@@ -121,6 +121,11 @@
 
 }
 
+
+@utility bg-gradient {
+  @apply bg-linear-to-l from-[#00B277] to-[#0092E7]
+}
+
 /* El hover del drop-shadow lo manejamos aparte */
 
 html.lenis, html.lenis body {
