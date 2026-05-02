@@ -1,35 +1,47 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".hamburger");
-  const navContainer = document.querySelector(".nav-container");
-  // Seleccionamos todos los enlaces dentro del menú móvil
-  const navLinks = document.querySelectorAll(".nav-container a");
+  const loaderObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const card = entry.target;
+        const circle = card.querySelector('.progress-circle');
+        const textElement = card.querySelector('.progress-text');
+        
+        // Obtenemos el objetivo desde el HTML (40, 28, o 16)
+        const targetValue = parseInt(card.getAttribute('data-target'));
+        
+        if (circle && textElement) {
+          // 1. Animación del Círculo
+          // Perímetro (r=56) es ~351.8. 
+          // Fórmula: Perímetro * (1 - (Target / 100))
+          const perimeter = 351.8;
+          const offset = perimeter * (1 - (targetValue / 100));
+          
+          circle.style.transition = 'stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1)';
+          circle.style.strokeDashoffset = offset;
 
-  const closeMenu = () => {
-    hamburger.classList.remove("active");
-    navContainer.classList.remove("active");
-    document.body.style.overflow = "auto";
-  };
+          // 2. Animación del Número
+          let startTime = null;
+          const duration = 2000;
 
-  if (hamburger && navContainer) {
-    hamburger.addEventListener("click", () => {
-      const isActive = navContainer.classList.toggle("active");
-      hamburger.classList.toggle("active");
-      document.body.style.overflow = isActive ? "hidden" : "auto";
-    });
+          const updateNumber = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            
+            textElement.innerText = Math.floor(progress * targetValue);
 
-    // Cerrar al clickear cualquier link
-    navLinks.forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-
-    // Cerrar si ensanchas la pantalla
-    window.addEventListener("resize", () => {
-      if (window.innerWidth >= 768) { // Ajustado a md de Tailwind
-        closeMenu();
+            if (progress < 1) requestAnimationFrame(updateNumber);
+          };
+          requestAnimationFrame(updateNumber);
+        }
+        loaderObserver.unobserve(card);
       }
     });
-  }
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.card-loader').forEach(card => loaderObserver.observe(card));
 });
+
+
 const lenis = new Lenis({
   duration: 2.2,
   lerp: 0.03,
@@ -248,3 +260,4 @@ document.addEventListener("DOMContentLoaded", () => {
     showForm();
   });
 });
+

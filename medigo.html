@@ -310,14 +310,146 @@
 
         </section>
 
+        <section id="loaders" class="mt-40">
+            <!-- SECCIÓN DE MÉTRICAS -->
+            <div class="max-width-sizes mx-auto px-4 py-16">
+
+                <div class="title-wrapper w-full flex justify-center mb-20">
+                    <h2 class="w-fit text-center h2-fluid title-gradient reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out"
+                        data-en="Design Process" data-es="Proceso de Diseño">
+                        Knowing the platforms
+                    </h2>
+                </div>
+
+                <!-- DEFINICIÓN DEL GRADIENTE (Se mantiene una sola vez) -->
+                <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+                    <defs>
+                        <linearGradient id="loader-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#00B277" />
+                            <stop offset="100%" stop-color="#0092E7" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <!-- GRID DE 4 COLUMNAS -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <!-- CARD 1: 40% -->
+                    <div class="card-loader card-my-skills w-full h-fit rounded-[3rem] border border-white-700/45 bg-white-500 flex flex-col items-center pt-8 pb-8 px-6 reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-200"
+                        data-target="40">
+                        <h4 class="text-lg font-medium text-black-300 mb-6 text-center" data-en="Frontend Speed"
+                            data-es="Velocidad Frontend">UptoDate</h4>
+
+                        <div class="relative flex items-center justify-center mb-6">
+                            <svg class="w-32 h-32 transform -rotate-90">
+                                <circle cx="64" cy="64" r="56" stroke="currentColor" stroke-width="10"
+                                    fill="transparent" class="text-white-700/20" />
+                                <circle class="progress-circle" cx="64" cy="64" r="56" stroke="url(#loader-gradient)"
+                                    stroke-width="10" stroke-linecap="round" fill="transparent"
+                                    style="stroke-dasharray: 351.8; stroke-dashoffset: 351.8;" />
+                            </svg>
+                            <div class="absolute w-16 h-16 flex items-center justify-center">
+                                <img src="/uptodate-icon.svg" class="w-13 h-13" alt="">
+                            </div>
+                        </div>
+
+                        <div class="text-[2rem] font-semibold title-gradient mb-4"><span class="progress-text">0</span>%
+                        </div>
+
+                        <p class="text-[1.25rem] text-center text-black-300/70 leading-tight"
+                            data-en="Optimal performance achieved through Vite and code splitting."
+                            data-es="Rendimiento óptimo logrado a través de Vite y code splitting.">
+                            This resource delivers evidence-based clinical content. It helps clinicians make the best
+                            decisions.
+                        </p>
+                    </div>
+
+                    <!-- CARD 2: 40% -->
+                    <div class="card-loader card-my-skills w-full h-fit rounded-[3rem] border border-white-700/45 bg-white-500 flex flex-col items-center pt-8 pb-8 px-6 reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-300"
+                        data-target="40">
+                        <h4 class="text-[1.25rem] font-medium text-black-300 mb-6 text-center" data-en="Security Check"
+                            data-es="Seguridad">Medscape</h4>
+                        <div class="relative flex items-center justify-center mb-6">
+                            <svg class="w-32 h-32 transform -rotate-90">
+                                <circle cx="64" cy="64" r="56" stroke="currentColor" stroke-width="10"
+                                    fill="transparent" class="text-white-700/20" />
+                                <circle class="progress-circle" cx="64" cy="64" r="56" stroke="url(#loader-gradient)"
+                                    stroke-width="10" stroke-linecap="round" fill="transparent"
+                                    style="stroke-dasharray: 351.8; stroke-dashoffset: 351.8;" />
+                            </svg>
+                            <div class="absolute w-16 h-16 flex items-center justify-center">
+                                <img src="/medscape-icon.svg" class="w-13 h-13" alt="">
+                            </div>
+                        </div>
+                        <div class="text-[2rem] font-semibold title-gradient mb-4"><span class="progress-text">0</span>%
+                        </div>
+                        <p class="text-[1.25rem] text-center text-black-300/70 leading-tight"
+                            data-en="Protection using Cloudflare Turnstile integration."
+                            data-es="Protección usando la integración de Cloudflare Turnstile.">
+                            This site offers medical news and expert viewpoints. It provides free education and drug
+                            references for doctors.
+                        </p>
+                    </div>
+
+                    <!-- CARD 3: 28% -->
+                    <div class="card-loader card-my-skills w-full h-fit rounded-[3rem] border border-white-700/45 bg-white-500 flex flex-col items-center pt-8 pb-8 px-6 reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-400"
+                        data-target="28">
+                        <h4 class="text-lg font-medium text-black-300 mb-6 text-center" data-en="Database Sync"
+                            data-es="Sincronía DB">PubMed</h4>
+                        <div class="relative flex items-center justify-center mb-6">
+                            <svg class="w-32 h-32 transform -rotate-90">
+                                <circle cx="64" cy="64" r="56" stroke="currentColor" stroke-width="10"
+                                    fill="transparent" class="text-white-700/20" />
+                                <circle class="progress-circle" cx="64" cy="64" r="56" stroke="url(#loader-gradient)"
+                                    stroke-width="10" stroke-linecap="round" fill="transparent"
+                                    style="stroke-dasharray: 351.8; stroke-dashoffset: 351.8;" />
+                            </svg>
+                            <div class="absolute w-16 h-16 flex items-center justify-center">
+                                <img src="/pubmed-icon.svg" class="w-13 h-13" alt="">
+                            </div>
+                        </div>
+                        <div class="text-[2rem] font-semibold title-gradient mb-4"><span class="progress-text">0</span>%
+                        </div>
+                        <p class="text-[1.25rem] text-center text-black-300/70 leading-tight"
+                            data-en="Real-time data management with Supabase."
+                            data-es="Gestión de datos en tiempo real con Supabase.">
+                            This engine searches millions of clinical abstracts. It is the primary tool for finding
+                            peer-reviewed research.
+                        </p>
+                    </div>
+
+                    <!-- CARD 4: 16% -->
+                    <div class="card-loader card-my-skills w-full h-fit rounded-[3rem] border border-white-700/45 bg-white-500 flex flex-col items-center pt-8 pb-8 px-6 reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-500"
+                        data-target="16">
+                        <h4 class="text-lg font-medium text-black-300 mb-6 text-center" data-en="Lighthouse LCP"
+                            data-es="Lighthouse LCP">MD Calc</h4>
+                        <div class="relative flex items-center justify-center mb-6">
+                            <svg class="w-32 h-32 transform -rotate-90">
+                                <circle cx="64" cy="64" r="56" stroke="currentColor" stroke-width="10"
+                                    fill="transparent" class="text-white-700/20" />
+                                <circle class="progress-circle" cx="64" cy="64" r="56" stroke="url(#loader-gradient)"
+                                    stroke-width="10" stroke-linecap="round" fill="transparent"
+                                    style="stroke-dasharray: 351.8; stroke-dashoffset: 351.8;" />
+                            </svg>
+                            <div class="absolute w-16 h-16 flex items-center justify-center">
+                                <img src="/mdcalc-icon.svg" class="w-13 h-13" alt="">
+                            </div>
+                        </div>
+                        <div class="text-[2rem] font-semibold title-gradient mb-4"><span class="progress-text">0</span>%
+                        </div>
+                        <p class="text-[1.25rem] text-center text-black-300/70 leading-tight"
+                            data-en="Adherence to Core Web Vitals and WCAG."
+                            data-es="Adherencia a Core Web Vitals y WCAG.">
+                            This tool provides clinical calculators and scores. It helps staff apply medical algorithms
+                            to treatment.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
 
 
-
-
-
-
-
-
+        </section>
 
 
 

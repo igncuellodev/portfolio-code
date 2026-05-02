@@ -189,3 +189,8 @@ html.lenis, html.lenis body {
     background-color 0.3s, 
     backdrop-filter 0.3s;
 }
+
+@keyframes fillProgress {
+  from { stroke-dashoffset: 364.4; }
+  to { stroke-dashoffset: 218.6; } /* Este es el 40% */
+}
